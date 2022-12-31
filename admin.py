@@ -1,19 +1,46 @@
+# This is the first file of the project which contains ""User class"" and ""admin class""
+
+
+
 class user:
     def __init__(self):
         """         Constructor of class 'user'      """
+        # List of products, Key of this dictionary would be the product code and value 
+        # of those keys would be name and price [name, price]
+        
         self.product = {0:['Parle-g','10'],1:['Hide & seek','40'],2:['Good day','20']}
 
   
 
+
+
+
+# Operations of  admin are defined in this admin class
+
 class admin(user):
     """      Tasks of admin are written under admin class       """
     
+    
+    
+    
+    
+    
+    # This method displays the list of all proudcts
     def display(self):
         print('\ncode    products')
         print("")
         for x,y in self.product.items():
             print(x,"   ",y)
-        
+    
+    
+    
+    
+    
+    
+    # This method shows choice of operation that can be performed with admin
+    # It accepts the choices from users and assign new methods to them to perform
+    # those choice as actions.
+       
     def menu(self):
         print("""
               Enter your choice : 
@@ -40,12 +67,16 @@ class admin(user):
         elif self.choice2 == 5:
             print("Exited")
             exit
-        
+     
+     
+     
+     
+     # This method accepts choice from ""menu method""  
+     # and add a new product to the list of products  
+     
+      
     def add_product(self):
-        print('code    product')
-        print("")
-        for x,y in self.product.items():
-            print(x,"   ",y)
+        self.display()
             
         self.prod_code=int(input("Enter the product code that your want to replace or you want to add : "))
         self.prod_details=list()
@@ -59,13 +90,12 @@ class admin(user):
         self.menu()
     
     
+    
+    # This method accepts choice from ""menu method"" 
+    # This method removes products from the list
+    
     def remove_product(self):
-        
-        
-        print('code    product')
-        print("")
-        for x,y in self.product.items():
-            print(x,"   ",y)
+        self.display()
             
             
         print("Enter the product code of the product that you want to remove : ")
@@ -74,14 +104,16 @@ class admin(user):
         del self.product[self.prod_code]
         self.menu()
     
+    
+    
+    
+    # This method accepts choice from ""menu method"" 
+    # and it can modify the name or price of listed product
+    # as pe your requirement.
+    
     def modify(self):
         
-        
-        print('code    product')
-        print("")
-        for x,y in self.product.items():
-            print(x,"   ",y)
-            
+        self.display()            
             
         print("Enter the product code of the product that you want to modify : ")
         print("""
@@ -92,13 +124,20 @@ class admin(user):
               """)
         self.choice3 = int(input())
         
+        
+        # The code written below takes the existing product form list 
+        # and it alters the name of that product.
+        
         if self.choice3 ==1:
             print("Enter the product code of the product : ")
             self.prod_code=int(input())
             self.newname=input("Enter the name you want to add : ")
             self.product[self.prod_code][0]=self.newname
             self.menu()
-            
+         
+         
+        # The code written below takes the existing product form list 
+        # and it alters the price of that product.   
         elif self.choice3 ==2:
             
             print("Enter the product code of the product : ")

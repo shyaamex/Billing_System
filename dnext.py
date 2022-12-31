@@ -1,6 +1,15 @@
 from admin import admin
 from consumer import buyer
+# This is third file of the project which contains ""the peration class""
+# and this operation class inherits ""buyer and admin class"" of previous files
 
+
+
+
+
+# This operation class is used to descide whether you want to 
+# perform admin operations or buyer operations 
+ 
 class operation(buyer,admin):
     def __init__(self):
         super().__init__()
