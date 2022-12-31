@@ -11,7 +11,7 @@ product instantly.
 
 # Requirements
 <p>
-There are no additional or external requirements to run this project, Python 3.11 is used.
+There are no additional or external requirements to run this project, Python 3.11 is used in this project.
 </p>
 <p>
 Use this <i><b> git command </i></b> to clone the directory in your pc
