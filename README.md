@@ -20,4 +20,4 @@ Use this <i><b> git command </i></b> to clone the directory in your pc
              git clone < URL of this repository >
 
 After the completion of clone process
-execute the <u><b> execution.py <b></u> file and the project would simply run on your machine.
+execute the <b> execution.py </b> file and the project would simply run on your machine.
