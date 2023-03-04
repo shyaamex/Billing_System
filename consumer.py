@@ -14,7 +14,7 @@ class buyer(admin):
        # This method displays menu to the user and revcieves the product code and send it to "buy method"
        def menu2(self):
            print("""
-                 Choose products that you want to purchase
+                 Choose the products that you want to purchase
                  """)
            self.instance23= admin()
            self.instance23.display()
